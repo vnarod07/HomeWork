@@ -1,13 +1,13 @@
 N = int(input())
-output = []
+output = set()
 for i in range(N):
     a = input().split()
     if a[1] == 'enter':
-        output.append(a[0])
+        output.add(a[0])
     else:
         output.remove(a[0])
 
-output.sort(reverse=True)
+output = sorted(output, reverse=True)
 
 for i in output:        
     print(i)
