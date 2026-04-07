@@ -7,7 +7,7 @@ for i in range(N):
     else:
         output.remove(a[0])
 
-output.sort()
+output.sort(reverse=True)
 
 for i in output:        
     print(i)
