@@ -8,7 +8,7 @@ void setup() {
   led = 9;
   pinMode(led, OUTPUT);
   set_period(100);
-  set_duty(255);
+  set_duty(100);
  time = 0;
 
 }
@@ -21,7 +21,7 @@ void loop() {
 }
 
 int periodf(int period, int duty, int x) {
-  int a = (int) (-abs(duty/(period*0.5f)*(x-period*0.5)) + duty);
+  int a = (int) (-abs(2.55*duty/(period*0.5f)*(x-period*0.5)) + 2.55*duty);
   if (a < 0) a = 0;
   if (a > 255) a = 255;
   return a; 
