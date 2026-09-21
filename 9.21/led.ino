@@ -17,7 +17,7 @@ void loop() {
  
   analogWrite(led, periodf(period,duty,time));
   time = (time + 10)%period;
-  delay(10);
+  delayMicroseconds(10);
 }
 
 int periodf(int period, int duty, int x) {
